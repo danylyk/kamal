@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KAMAL</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="includes/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="includes/css/fotorama.css">
+  <link rel="stylesheet" type="text/css" href="includes/css/slick.css">
+  <link rel="stylesheet" type="text/css" href="includes/css/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="includes/css/common.css">
+  <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport">
+  <script src="includes/js/jquery.min.js"></script>
+  <script src="includes/js/jquery-ui.js"></script>
+  <script src="includes/js/slick.min.js"></script>
+  <script src="includes/js/jquery.maskedinput.min.js"></script>
+  <script src="includes/js/fotorama.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ALRwb14BAAAAB1akKgIAfH7GkrGlrDqjqcYrif1GTkfGbboAAAAAAAAAAADkQsqwIl_NcB9KU2Qxg3HypPZLHw==&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body class="transforming loading">
+  <div class="loader">
+    <div class="logos clear">
+      <div><img src="includes/img/logos/1.svg" alt=""></div>
+      <div><img src="includes/img/logos/2.svg" alt=""></div>
+      <div><img src="includes/img/logos/3.svg" alt=""></div>
+    </div>
+  </div>
+
+  <a href="#" id="cart" class="empty">
+    <div>3</div>
+  </a>
+  
+  <header>
+    <div class="wrap-header">
+      <div class="container clear">
+        <div class="header-menu clear float-left">
+          <div class="wrap-header-menu">
+            <ul class="float-left">
+              <li class="dropdown active">
+                <div><a href="#">О театре</a></div>
+                <ul>
+                  <li><div><a href="#">ИСТОРИЯ</a></div></li>
+                  <li class="dropdown">
+                    <div><a href="#">РЕПЕРТУАР</a></div>
+                    <ul>
+                      <li><div><a href="#">Активный репертура</a></div></li>
+                      <li><div><a href="#">Архив</a></div></li>
+                    </ul>
+                  </li>
+                  <li><div><a href="#">ПЕРСОНАЛИИ</a></div></li>
+                  <li><div><a href="#">ДЛЯ СМИ</a></div></li>
+                  <li><div><a href="#">СПОНСОРЫ</a></div></li>
+                  <li><div><a href="#">УЧРЕДИТЕЛЬНЫЕ ДОКУМЕНТЫ</a></div></li>
+                </ul>
+              </li>
+              <li><div><a href="#">Афиша</a></div></li>
+              <li><div><a href="#">Визит в театр</a></div></li>
+              <li><div><a href="#">Проекты</a></div></li>
+              <li><div><a href="#">Контакты</a></div></li>
+              <li><div><a href="#">Магазин</a></div></li>
+              <li>
+                <div><span>Ещё</span></div>
+                <ul>
+                  <li><div><a href="#">Магазин</a></div></li>
+                  <li><div><a href="#">Контакты</a></div></li>
+                  <li><div><a href="#">Проекты</a></div></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="float-left">
+              <a href="#" class="button">Купить билет</a>
+            </div>
+            <div class="login-link logged">
+              <img src="includes/img/icons/1.svg" alt="">
+              <div class="link">
+                <span>Рустем Биктагиров</span>
+                <ul>
+                  <li class="show"><div><a href="#">КОРЗИНА (0)</a></div></li>
+                  <li><div><a href="#">МОИ БИЛЕТЫ</a></div></li>
+                  <li><div><a href="#">ЛИЧНЫЕ ДАННЫЕ</a></div></li>
+                  <li><div><a href="#">ИНФОРМАЦИЯ</a></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-control clear float-right">
+          <div class="info-season">
+            114 сезон
+          </div>
+          <div class="login-link logged float-left">
+            <img src="includes/img/icons/1.svg" alt="">
+            <div class="link">
+              <span>Рустем Биктагиров</span>
+            </div>
+          </div>
+          <div class="lang float-left">
+            <div class="lang-active">
+              <img src="includes/img/langs/1.svg" alt="">
+            </div>
+            <ul>
+              <li><div><a href="#"><img src="includes/img/langs/2.svg" alt=""></a></div></li>
+              <li><div><a href="#"><img src="includes/img/langs/3.svg" alt=""></a></div></li>
+            </ul>
+          </div>
+          <div class="burger float-right">
+            <div class="burger-button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="search float-left">
+            <div class="search-button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-search wrap-header">
+      <div class="container">
+        <form>
+          <input type="text" name="">
+          <button type="submit"><img src="includes/img/icons/2.1.svg" alt=""></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <div class="loader-animation-wrap">
+    <div class="head">
+      <div class="container clear">
+        <div class="float-right">
+          <div class="inner-menu">
+            <div class="header-menu container">
+              <div class="wrap-header-menu">
+                <ul>
+                  <li><div><a href="#">КОРЗИНА (0)</a></div></li>
+                  <li class="active"><div><a href="#">МОИ БИЛЕТЫ</a></div></li>
+                  <li><div><a href="#">ЛИЧНЫЕ ДАННЫЕ</a></div></li>
+                  <li><div><a href="#">ИНФОРМАЦИЯ</a></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="links float-left clear">
+          <div class="active"><a href="#"><img src="includes/img/logos/1.svg" alt=""></a></div>
+          <div><a href="#"><img src="includes/img/logos/2.svg" alt=""></a></div>
+          <div><a href="#"><img src="includes/img/logos/3.svg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="splitter"></div>
+
+    <main>
+      <div class="container">
+        <h1>Как добраться</h1>
+        <div class="map" id="map"></div>
+        <script type="text/javascript">
+          var mapData = {
+            x: 55.75,
+            y: 37.57,
+            title: "Татарский Государственный Академический Театр им. Галиасгара Камала",
+            time: "пн—вс, 10:00—19:30",
+            phone: "+7 (843) 293-03-74"
+          };
+        </script>
+        <div class="page page-map">
+          <div class="layout-2">
+            <div class="col">
+              <h1>На чем доехать:</h1>
+              <p><img src="includes/img/icons/27.svg" alt=""> <b><font color="#409690">Станция Площадь Габудуллы Тукая</font></b></p>
+              <p><img src="includes/img/icons/28.svg" alt=""> <b><font color="#409690">1, 5, 6, 10, 31, 56, 72, 74а</font></b> <span>до остановки Г. Камала </span></p>
+              <p><img src="includes/img/icons/29.svg" alt=""> <b><font color="#409690">3, 5</font></b> <span>до остановки Г. Камала </span></p>
+            </div>
+            <div class="col">
+              <h1>Парковки:</h1>
+              <ul>
+                <li><p>ул. Островского, 22</p></li>
+                <li><p>ул. Профсоюзная, 16а</p></li>
+                <li><p>Гостиница «Татарстана». Пушкина, 4</p></li>
+                <li><p>ГУМ. Баумана, 51</p></li>
+                <li><p>Гипермаркет «Кольцо». Петербургская, 1</p></li>
+                <li><p>Многоуровневая парковка «Центральная». Петербургская, 1</p></li>
+                <li><p>Гранд Отель Казань. Петербургская, 1</p></li>
+                <li><p>Пятиэтажный паркинг, пересечение ул. Профсоюзная и Астрономическая</p></li>
+                <li><p>Островского, 22 (возле SPA-центр «Лучано»)</p></li>
+                <li><p>Центральный рынок. Межлаука, 13</p></li>
+              </ul>
+              <br>
+              <br>
+              <p><font color="#ff0000">&nbsp; &nbsp; &nbsp;Внимание! Работает эвакуатор</font></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="malling">
+      <div class="container clear">
+        <div class="part float-left">
+          <h1>Подпишитесь на рассылку, чтобы быть в курсе новостей театра</h1>
+        </div>
+        <div class="part float-left">
+          <form>
+            <div class="wrap-input">
+              <input type="email" placeholder="Введите e-mail" data-req="">
+              <div class="field-info">Ошибка, введите корректный адрес</div>
+            </div>
+            <div class="wrap-submit">
+              <button type="submit" class="button link">Подписаться</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="overflow">
+          <div class="widgets clear">
+            <div class="wrap_widget">
+              <div class="widget">
+                <img src="includes/img/others/1.svg" alt="">
+              </div>
+            </div>
+            <div class="wrap_widget">
+              <div class="widget">
+                <img src="includes/img/others/2.svg" alt="">
+              </div>
+            </div>
+            <div class="wrap_widget">
+              <div class="widget">
+                <img src="includes/img/others/3.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2>Спонсоры</h2>
+        <div class="sponsors">
+          <div class="sponsors_line">
+            <div class="sponsor">
+              <div class="wrapper">
+                <img src="includes/img/sponsors/1.svg" alt="">
+              </div>
+            </div>
+            <div class="sponsor">
+              <div class="wrapper">
+                <img src="includes/img/sponsors/1.svg" alt="">
+              </div>
+            </div>
+            <div class="sponsor">
+              <div class="wrapper">
+                <img src="includes/img/sponsors/1.svg" alt="">
+              </div>
+            </div>
+            <div class="sponsor">
+              <div class="wrapper">
+                <img src="includes/img/sponsors/1.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info clear">
+          <div class="part">
+            <p>Copyright &copy; Татарский государственный Академический театр имени Г.Камала, 2008-2019<br>
+            При копировании информации обязательна активная ссылка: <a href="www.kamalteatr.ru" target="_blank">www.kamalteatr.ru</a>
+            </p>
+            <p>Создание и поддержка сайта <a href="https://markweber.ru/" target="_blank"><img src="includes/img/icons/MarkWeber.svg" alt="Mark Weber"></a></p>
+          </div>
+          <div class="part clear">
+            <div class="part">
+              <p>420021, Россия, Татарстан, г.Казань, ул. Татарстан д.1 <br>
+              (843) 293-03-74 <a href="mailto:kamal.teatr@tatar.ru">kamal.teatr@tatar.ru</a>
+              </p>
+              <p class="links">
+                <a href="#" target="_blank"><img src="includes/img/socials/5.svg" alt=""></a>
+                <a href="#" target="_blank"><img src="includes/img/socials/6.svg" alt=""></a>
+                <a href="#" target="_blank"><img src="includes/img/socials/7.svg" alt=""></a>
+                <a href="#" target="_blank"><img src="includes/img/socials/8.svg" alt=""></a>
+                <a href="#" target="_blank">Оценка качества услуг</a>
+              </p>
+            </div>
+            <div class="part">
+              <div>
+                <img src="includes/img/icons/pay2.svg" alt="">
+                <img src="includes/img/icons/pay3.svg" alt="">
+                <img src="includes/img/icons/pay4.svg" alt="">
+                <img src="includes/img/icons/pay1.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="main-back"></div>
+  <div class="main-back-dark"></div>
+
+  <script src="includes/js/common.js"></script>
+</body>
+</html>
