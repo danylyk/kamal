@@ -195,26 +195,27 @@
                     <td><div class="remove"></div></td>
                   </tr>
                 </table>
-                <h2 class="text-right result">
-                  <span>Итого:</span> 300 рублей
-                </h2>
               </div>
               <div class="data-person">
                 <div class="title">Данные покупателя</div>
                 <form>
-                  <div class="wrap-input">
-                    <input type="email" placeholder="EMAIL" name="">
+                  <div class="wrap-input code"> <!-- .false | .true -->
+                    <input type="text" placeholder="Введите промокод" name="">
+                    <div class="arrow"></div>
+                    <div class="clear">Сбросить</div>
+                    <div class="info">Промокод не найден</div>
                   </div>
-                  <div class="wrap-input">
-                    <input type="text" placeholder="ИМЯ" name="">
+                  <div class="form-totals">
+                    <div class="form-total clear">
+                      <div class="l">Скидка по промокоду</div>
+                      <div class="r green">100 ₽</div>
+                    </div>
+                    <div class="form-total clear">
+                      <div class="l">Итого</div>
+                      <div class="r large">300 ₽</div>
+                    </div>
                   </div>
-                  <div class="wrap-input">
-                    <input type="text" placeholder="ФАМИЛИЯ" name="">
-                  </div>
-                  <div class="wrap-input">
-                    <input type="tel" placeholder="ТЕЛЕФОН" name="">
-                  </div>
-                  <div class="wrap-submit text-right">
+                  <div class="wrap-submit submit-full text-right">
                     <button class="button">Перейти к оплате</button>
                   </div>
                 </form>
