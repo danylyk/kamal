@@ -195,8 +195,19 @@ main { overflow: hidden; }
 }
 .billboard .wrap-info .control { padding: 0 40px; }
 @media (max-width: 1024px) {
+  .order .info .data-person { width: 360px; }
   .billboard .wrap-info .control, .billboard .wrap-info .place { padding: 0; }
   .billboard .wrap-info .place { padding-left: 20px; }
+}
+@media (max-width: 970px) {
+  .order .info .data-person .title { display: none; }
+  .order .info .data-person { width: 300px; }
+}
+@media (max-width: 669px) {
+  .order .info .data-person {
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 
 .wrap-info .button {
