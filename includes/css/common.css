@@ -257,3 +257,5 @@ main { overflow: hidden; }
 .main-slider.light + .main-slider-dots .dot .wrap-dot .info { color: rgba(0,0,0,0.5); }
 .main-slider.light + .main-slider-dots .dot:hover .wrap-dot .info { color: rgba(0,0,0,0.75); }
 .main-slider.light + .main-slider-dots .dot.active .wrap-dot .info { color: #000; }
+.main-slider-dots > .wrap-dots .slick-list { overflow: visible; }
+.main-slider-dots .dot .wrap-dot .image { vertical-align: top; }
