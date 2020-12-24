@@ -1,9 +1,9 @@
 $(".search-button").click(function(e){
   e.preventDefault();
   $(".search-button").addClass("active");
-  $(".header-search").slideDown(250);
+  $("header .header-search").slideDown(250);
   setTimeout(function(){
-    $(".header-search input[type=text]").focus();
+    $("header .header-search input[type=text]").focus();
   }, 300);
   $(".main-back").addClass("active");
 });
@@ -12,8 +12,9 @@ $(".main-back, .main-back-dark").click(function(e){
   e.preventDefault();
   $(".main-back").removeClass("active");
   $(".main-back-dark").removeClass("active");
+  $(".reminder").removeClass("active");
 
-  $(".header-search").slideUp(250);
+  $("header .header-search").slideUp(250);
   $(".search-button").removeClass("active");
   $(".header-menu").removeClass("active");
   $(".burger-button").removeClass("active");
@@ -565,3 +566,44 @@ $(".code .clear").click(function(){
   p.removeClass("false");
   $("input", p).val("");
 });
+
+$.each($("*[data-reminder]"), function(){
+  var countDownDate = new Date($(this).attr("data-reminder")).getTime();
+  var el = $(this);
+
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    if (days < 10) { days = "0"+days; }
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    if (hours < 10) { hours = "0"+hours; }
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    if (minutes < 10) { minutes = "0"+minutes; }
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    if (seconds < 10) { seconds = "0"+seconds; }
+    $(".countdown span[data-timer=\"0\"] > div", el).text(days);
+    $(".countdown span[data-timer=\"1\"] > div", el).text(hours);
+    $(".countdown span[data-timer=\"2\"] > div", el).text(minutes);
+    $(".countdown span[data-timer=\"3\"] > div", el).text(seconds);
+    if (distance < 0) {
+      clearInterval(x);
+      $(el).remove();
+    }
+  }, 1000);
+})
+
+$(".reminder .wrap").click(function(){
+  if (!$(".reminder").hasClass("active")) {
+    $(".reminder").addClass("active");
+    $(".main-back").addClass("active");
+  }
+})
+$(".reminder .close").click(function(){
+  if (!$(".reminder").hasClass("active")) {
+    $(".reminder").addClass("active");
+    $(".main-back").addClass("active");
+  } else if ($(".reminder").hasClass("active")) {
+    $(".main-back").click();
+  }
+})
