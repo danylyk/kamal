@@ -586,3 +586,12 @@ main.f404 { position: relative; }
 @media (max-width: 370px) {
   .reminder { display: none; }
 }
+
+@media (max-width: 800px) {
+  .flex-layout-mob {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: -30px;
+  }
+  .flex-layout-mob .sidebar { padding-bottom: 30px; }
+}
