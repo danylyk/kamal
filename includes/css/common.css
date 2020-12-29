@@ -322,18 +322,22 @@ main { overflow: hidden; }
 .s404 {
   max-width: 996px;
   float: right;
+  position: relative;
 }
 .p404 {
   font-size: 450px;
   color: rgba(188,188,188,0.3);
   font-family: "Prata";
   line-height: 1;
+  position: relative;
+  z-index: 2;
 }
 .c404 { max-width: 1320px; }
 .i404 {
   position: absolute;
-  left: 0;
+  right: 100%;
   top: 50%;
+  margin-right: 50px;
   transform: translateY(-50%);
   -o-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
