@@ -599,3 +599,14 @@ main.f404 { position: relative; }
   }
   .flex-layout-mob .sidebar { padding-bottom: 30px; }
 }
+
+.input-select ul li > a { 
+	display: block;
+	padding: 0;
+}
+.input-select ul li.show > a, .input-select ul li > a:hover {
+	background-color: rgba(52,144,141,0.1);
+    color: #409690;
+    cursor: pointer;
+}
+.input-select ul li.show > a span, .input-select ul li > a:hover span { color: #409690; }

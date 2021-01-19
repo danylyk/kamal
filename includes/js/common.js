@@ -354,7 +354,7 @@ $("input[data-req]").click(function(){
 });
 
 $("form").on("reset",function(){
-  $.each($(".input-select:not(.checkboxes)", $(this)), function(){
+  $.each($(".input-select:not(.checkboxes):not(.links)", $(this)), function(){
     $("li", $(this)).removeClass("show");
     var text = $("li[data-clear]", $(this)).attr("data-text");
     var value = $("li[data-clear]", $(this)).attr("data-value");
@@ -367,7 +367,7 @@ $("form").on("reset",function(){
   });
 });
 
-$.each($(".input-select:not(.checkboxes)"), function(){
+$.each($(".input-select:not(.checkboxes):not(.links)"), function(){
   $("li", $(this)).removeClass("show");
   var text = $("li[data-clear]", $(this)).attr("data-text");
   var value = $("li[data-clear]", $(this)).attr("data-value");
