@@ -195,6 +195,7 @@ $(".input-select ul li").click(function(){
     $("li", parent).removeClass("show");
     $(this).addClass("show");
     $("input", parent).val(value);
+    $("input", parent).change();
     $(".item-active", parent).text(text);
   } else {
     var count = 0;
