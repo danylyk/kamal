@@ -147,7 +147,7 @@ if ($(".main-slider").length > 0) {
     $(".main-slider").removeClass("light");
   }
 
-  $(".main-slider-dots .design-line div").css("width", (100/$(".main-slider .slide").length)+"%");
+  // $(".main-slider-dots .design-line div").css("width", (100/$(".main-slider .slide").length)+"%");
   let shift = (100/($(".main-slider .slide").length));
 
   $(".main-slider").on("beforeChange", function(e, s, d, n) {
@@ -160,7 +160,7 @@ if ($(".main-slider").length > 0) {
     $(".wrap-main-slider .bgs div:nth-child("+(n+1)+")").addClass("active");
     $(".main-slider-dots .dot").removeClass("active");
     $(".main-slider-dots .dot:nth-child("+(n+1)+")").addClass("active");
-    $(".main-slider-dots .design-line div").css("left", (n*shift)+"%");
+    // $(".main-slider-dots .design-line div").css("left", (n*shift)+"%");
   });
 }
 
@@ -176,40 +176,6 @@ $(".button-control").click(function(){
 $(".main-slider-dots .dot").click(function(){
   var index = $(this).index();
   $(".main-slider").slick('slickGoTo', index);
-});
-
-
-$(".input-select .item-active").click(function(){
-  var parent = $(this).closest(".input-select");
-  parent.addClass("show");
-  $(".main-back").addClass("active");
-});
-
-$(".input-select ul li").click(function(){
-  var value = $(this).attr("data-value");
-  var text = $(this).attr("data-text");
-  var parent = $(this).closest(".input-select");
-  if (!parent.hasClass("checkboxes")) {
-    $(".main-back").removeClass("active");
-    $(".input-select").removeClass("show");
-    $("li", parent).removeClass("show");
-    $(this).addClass("show");
-    $("input", parent).val(value);
-    $("input", parent).change();
-    $(".item-active", parent).text(text);
-  } else {
-    var count = 0;
-    $.each($("input[type=\"checkbox\"]", parent), function(){
-      if ($(this).prop("checked")) {
-        count += 1;
-      }
-    });
-    if (count == 0) {
-      $(".item-active", parent).text(parent.attr("data-default"));
-    } else {
-      $(".item-active", parent).text(parent.attr("data-checked")+count);
-    }
-  }
 });
 
 $.datepicker.regional.ru = {
@@ -366,15 +332,6 @@ $("form").on("reset",function(){
   $.each($(".input-select.checkboxes", $(this)), function(){
     $(".item-active", $(this)).text($(this).attr("data-default"));
   });
-});
-
-$.each($(".input-select:not(.checkboxes):not(.links)"), function(){
-  $("li", $(this)).removeClass("show");
-  var text = $("li[data-clear]", $(this)).attr("data-text");
-  var value = $("li[data-clear]", $(this)).attr("data-value");
-  $("li[data-clear]", $(this)).addClass("show");
-  $("input", $(this)).val(value);
-  $(".item-active", $(this)).text(text);
 });
 
 
@@ -608,3 +565,49 @@ $(".reminder .close").click(function(){
     $(".main-back").click();
   }
 })
+
+function inputSelect () {
+  $.each($(".input-select:not(.checkboxes):not(.links)"), function(){
+    $("li", $(this)).removeClass("show");
+    var text = $("li[data-clear]", $(this)).attr("data-text");
+    var value = $("li[data-clear]", $(this)).attr("data-value");
+    $("li[data-clear]", $(this)).addClass("show");
+    $("input", $(this)).val(value);
+    $(".item-active", $(this)).text(text);
+  });
+
+  $(".input-select .item-active").click(function(){
+    var parent = $(this).closest(".input-select");
+    parent.addClass("show");
+    $(".main-back").addClass("active");
+  });
+
+  $(".input-select ul li").click(function(){
+    var value = $(this).attr("data-value");
+    var text = $(this).attr("data-text");
+    var parent = $(this).closest(".input-select");
+    if (!parent.hasClass("checkboxes")) {
+      $(".main-back").removeClass("active");
+      $(".input-select").removeClass("show");
+      $("li", parent).removeClass("show");
+      $(this).addClass("show");
+      $("input", parent).val(value);
+      $("input", parent).change();
+      $(".item-active", parent).text(text);
+    } else {
+      var count = 0;
+      $.each($("input[type=\"checkbox\"]", parent), function(){
+        if ($(this).prop("checked")) {
+          count += 1;
+        }
+      });
+      if (count == 0) {
+        $(".item-active", parent).text(parent.attr("data-default"));
+      } else {
+        $(".item-active", parent).text(parent.attr("data-checked")+count);
+      }
+    }
+  });
+}
+
+inputSelect();
