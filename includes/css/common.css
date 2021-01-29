@@ -620,3 +620,4 @@ main.f404 { position: relative; }
     cursor: pointer;
 }
 .input-select ul li.show > a span, .input-select ul li > a:hover span { color: #409690; }
+.input-select { text-align: left; }
