@@ -289,7 +289,7 @@ $("form").submit(function(e){
   var ok = true;
   var form = $(this);
   $("input").removeClass("failed");
-  $.each($("input[data-req]", $(this)), function(){
+  $.each($("input[data-req], textarea[data-req]", $(this)), function(){
     if (($(this).attr("type") == "tel" && ($(this).val().split("")[15] == undefined || $(this).val().split("")[15] == "_")) || ($(this).attr("type") == "email" && !emainPattern.test($(this).val())) || ($(this).attr("type") == "checkbox" && !$(this).prop( "checked" )) || ($.trim($(this).val()) == "")) {
       $(this).addClass("failed");
       if (ok) {
@@ -314,7 +314,7 @@ $("form").submit(function(e){
   if (!ok) {e.preventDefault();}
 });
 
-$("input[data-req]").click(function(){
+$("input[data-req], textarea[data-req]").click(function(){
   if ($(this).hasClass("failed")) {
     $(this).removeClass("failed");
   }
