@@ -625,3 +625,4 @@ main.f404 { position: relative; }
   text-align: right;
   width: 10px;
 }
+.tickets .slick-track { margin-left: 0; }
