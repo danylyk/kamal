@@ -49,6 +49,8 @@ $(".system-tabs .tabs-links a").click(function(e){
         $(p[i]).closest(".tabs").css("height", (h+activeHeight)+"px");
       }
     }
+
+    if (window.onTabChange) window.onTabChange();
   }
 });
 

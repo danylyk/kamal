@@ -626,3 +626,4 @@ main.f404 { position: relative; }
   width: 10px;
 }
 .tickets .slick-track { margin-left: 0; }
+.news .news_item .gallery { display: none; }
