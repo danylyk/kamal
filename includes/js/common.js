@@ -50,7 +50,7 @@ $(".system-tabs .tabs-links a").click(function(e){
       }
     }
 
-    if (window.onTabChange) window.onTabChange();
+    if (window.onTabChange) window.onTabChange(tab);
   }
 });
 
