@@ -654,3 +654,8 @@ main.f404 { position: relative; }
 @media (max-width: 1025px) {
   .wrap-header .links { display: none; }
 }
+.simple-slider .slick-track {
+  display: flex;
+  align-items: center;
+}
+.inner-menu .header-menu .wrap-header-menu>ul { margin-left: 0; }

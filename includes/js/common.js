@@ -22,7 +22,7 @@ $(".main-back, .main-back-dark").click(function(e){
   $(".input-select").removeClass("show");
 });
 
-$(".system-tabs .tabs-links a").click(function(e){
+$(".system-tabs .tabs-links:not(.links) a").click(function(e){
   e.preventDefault();
   var li = $(this).closest("li");
   var parent = $(this).closest(".tabs-links");
