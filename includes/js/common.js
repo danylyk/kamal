@@ -54,6 +54,13 @@ $(".system-tabs .tabs-links:not(.links) a").click(function(e){
   }
 });
 
+$.each($(".system-tabs .tabs-links"), function(){
+  let p = $(this);
+  if ($("ul li.active", p).length < 1) {
+    $(".design-element", p).css("display", "none");
+  }
+});
+
 $(window).ready(function(){
   var loading = setInterval(function(){
     if (document.readyState == "complete") {
